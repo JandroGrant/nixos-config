@@ -1,0 +1,35 @@
+@import url('/home/jandro/.cache/wal/colors-waybar.css');
+
+* {
+  border: none;
+  border-radius: 0;
+
+  font-family: "FantasqueSansM Nerd Font", monospaced;
+  font-size: 12pt;
+
+  min-height: 0;
+}
+
+window#waybar {
+  opacity: 0.9;
+  color: @foreground;
+  background: @background;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  background: @background;
+  color: @foreground;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: @color3;
+  color: @background;
+}
+
+#clock {
+  padding: 0 4px;
+  background: @background;
+}

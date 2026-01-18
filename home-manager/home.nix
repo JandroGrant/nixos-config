@@ -37,6 +37,7 @@ in {
     ./programs/zoxide
 
     ./programs/hyprland
+    ./programs/waybar
   ];
 
   services = {
