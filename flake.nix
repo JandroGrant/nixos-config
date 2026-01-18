@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +24,12 @@
     alejandra,
     local-flake,
     ...
-  }: {
+  }: 
+  let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in
+  {
     nixosConfigurations.mandarina = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -31,24 +37,27 @@
         {
           environment.systemPackages = [alejandra.defaultPackage.x86_64-linux];
         }
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.jandro = import ./home-manager/home.nix;
-            backupFileExtension = "backup";
-            extraSpecialArgs = {
-              inherit local-flake;
-            };
-          };
-        }
+        # home-manager.nixosModules.home-manager
+        # {
+        #   home-manager = {
+        #     useGlobalPkgs = true;
+        #     useUserPackages = true;
+        #     users.jandro = import ./home-manager/home.nix;
+        #     backupFileExtension = "backup";
+        #     extraSpecialArgs = {
+        #       inherit local-flake;
+        #     };
+        #   };
+        # }
       ];
     };
 
-    homeConfiguration."jandro" = home-manager.lib.HomeManagerConfiguration {
+    homeConfigurations."jandro" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ ./home-manager/home.nix ];
+      extraSpecialArgs = {
+        inherit local-flake;
+      };
     };
   };
 }

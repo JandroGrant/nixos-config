@@ -15,9 +15,10 @@ in {
       local-flake.packages.x86_64-linux.default
       pywal16
       nerd-fonts.fantasque-sans-mono
-      davinci-resolve
       vlc
-      obsidian
+
+      # davinci-resolve
+      # obsidian
 
       ( import ../scripts/pywal-reload.nix { inherit pkgs; } )
     ];
@@ -167,4 +168,6 @@ in {
       enable = true;
     };
   };
+
+  programs.home-manager.enable = true;
 }
