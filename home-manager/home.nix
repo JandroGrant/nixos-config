@@ -19,8 +19,6 @@ in {
 
       davinci-resolve
       obsidian
-
-      (import ../scripts/pywal-reload.nix {inherit pkgs;})
     ];
   };
 
