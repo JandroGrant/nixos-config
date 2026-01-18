@@ -29,6 +29,7 @@ in {
     ./programs/fastfetch
     ./programs/fish
     ./programs/hyprshot
+    ( import ./programs/kitty { inherit pkgs; } )
     ./programs/rmpc
     ( import ./programs/rofi { inherit config; } )
     ./programs/vesktop
@@ -37,22 +38,22 @@ in {
   ];
 
   programs = {
-    kitty = {
-      enable = true;
-      extraConfig = ''
-        include ~/.cache/wal/colors-kitty.conf
-        background_opacity 0.7
-      '';
-      settings = {
-        cursor_trail = 3;
-        cursor_trail_decay = "0.1 0.4";
-      };
-      font = {
-        name = "FantasqueSansM Nerd Font";
-        size = 16;
-        package = pkgs.nerd-fonts.fantasque-sans-mono;
-      };
-    };
+    # kitty = {
+    #   enable = true;
+    #   extraConfig = ''
+    #     include ~/.cache/wal/colors-kitty.conf
+    #     background_opacity 0.7
+    #   '';
+    #   settings = {
+    #     cursor_trail = 3;
+    #     cursor_trail_decay = "0.1 0.4";
+    #   };
+    #   font = {
+    #     name = "FantasqueSansM Nerd Font";
+    #     size = 16;
+    #     package = pkgs.nerd-fonts.fantasque-sans-mono;
+    #   };
+    # };
 
     # rofi = {
     #   enable = true;
@@ -93,19 +94,6 @@ in {
     #     };
     #   };
     # };
-
-    tmux = {
-      enable = true;
-      shell = "${pkgs.fish}/bin/fish";
-      terminal = "tmux-256color";
-
-      prefix = "C-a";
-
-      clock24 = true;
-      escapeTime = 0;
-      disableConfirmationPrompt = true;
-      baseIndex = 1;
-    };
   };
 
   services = {
