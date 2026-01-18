@@ -1,6 +1,6 @@
 {
-fastfetch = {
-  enable = true;
+  programs.fastfetch = {
+    enable = true;
     settings = {
       logo = {
         type = "auto";

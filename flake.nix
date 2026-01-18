@@ -24,12 +24,10 @@
     alejandra,
     local-flake,
     ...
-  }: 
-  let
+  }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-  in
-  {
+  in {
     nixosConfigurations.mandarina = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -54,7 +52,7 @@
 
     homeConfigurations."jandro" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [ ./home-manager/home.nix ];
+      modules = [./home-manager/home.nix];
       extraSpecialArgs = {
         inherit local-flake;
       };
