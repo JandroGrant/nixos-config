@@ -30,7 +30,7 @@ in {
     ./programs/fish
     ./programs/hyprshot
     ./programs/rmpc
-    ./programs/rofi { inherit config; }
+    ( ./programs/rofi { inherit config; } )
     ./programs/vesktop
     ./programs/yazi
     ./programs/zoxide
