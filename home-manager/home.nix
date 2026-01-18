@@ -24,10 +24,11 @@ in {
     ];
   };
 
+  imports = [
+    ./programs/bat
+  ];
+
   programs = {
-    bat = {
-      enable = true;
-    };
 
     fastfetch = {
       enable = true;
