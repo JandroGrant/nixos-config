@@ -26,10 +26,10 @@ in {
 
   imports = [
     ./programs/bat
+    ./programs/fastfetch
   ];
 
   programs = {
-
     fish = {
       enable = true;
       shellAliases = {
