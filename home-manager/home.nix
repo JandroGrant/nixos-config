@@ -27,11 +27,6 @@ in {
   imports = [
     ./programs/bat
   ];
-<<<<<<< HEAD
-
-  programs = {
-=======
->>>>>>> master
 
   programs = {
 
