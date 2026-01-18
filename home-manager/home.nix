@@ -34,6 +34,7 @@ in {
     (import ./programs/rofi {inherit config;})
     ./programs/vesktop
     ./programs/yazi
+    ./programs/zoxide
   ];
 
   services = {
