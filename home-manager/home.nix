@@ -35,6 +35,8 @@ in {
     ./programs/vesktop
     ./programs/yazi
     ./programs/zoxide
+
+    ./programs/hyprland
   ];
 
   services = {
