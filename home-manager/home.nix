@@ -29,9 +29,9 @@ in {
     ./programs/fastfetch
     ./programs/fish
     ./programs/hyprshot
-    ( import ./programs/kitty { inherit pkgs; } )
+    (import ./programs/kitty {inherit pkgs;})
     ./programs/rmpc
-    ( import ./programs/rofi { inherit config; } )
+    (import ./programs/rofi {inherit config;})
     ./programs/vesktop
     ./programs/yazi
   ];

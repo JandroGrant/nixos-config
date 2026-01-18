@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   programs.rofi = {
     enable = true;
     font = "FantasqueSansM Nerd Font 12";

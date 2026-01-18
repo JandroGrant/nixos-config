@@ -28,10 +28,12 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
-      config.allowUnfreePredicate = (pkg:
-        builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
-	  "obsidian" "davinci-resolve"
-	]
+      config.allowUnfreePredicate = (
+        pkg:
+          builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
+            "obsidian"
+            "davinci-resolve"
+          ]
       );
     };
   in {
