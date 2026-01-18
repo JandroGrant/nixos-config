@@ -26,7 +26,14 @@
     ...
   }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfreePredicate = (pkg:
+        builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
+	  "obsidian" "davinci-resolve"
+	]
+      );
+    };
   in {
     nixosConfigurations.mandarina = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
