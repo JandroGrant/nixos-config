@@ -27,6 +27,7 @@ in {
   imports = [
     ./programs/bat
     ./programs/fastfetch
+    ./programs/fish
   ];
 
   programs = {
