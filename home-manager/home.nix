@@ -29,10 +29,14 @@ in {
     ./programs/fastfetch
     ./programs/fish
     ./programs/hyprshot
+    ./programs/rmpc
+    # ./programs/rofi
+    ./programs/vesktop
+    ./programs/yazi
+    ./programs/zoxide
   ];
 
   programs = {
-
     kitty = {
       enable = true;
       extraConfig = ''
@@ -48,10 +52,6 @@ in {
         size = 16;
         package = pkgs.nerd-fonts.fantasque-sans-mono;
       };
-    };
-
-    rmpc = {
-      enable = true;
     };
 
     rofi = {
@@ -105,19 +105,6 @@ in {
       escapeTime = 0;
       disableConfirmationPrompt = true;
       baseIndex = 1;
-    };
-
-    vesktop = {
-      enable = true;
-    };
-
-    yazi = {
-      enable = true;
-    };
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
     };
   };
 
