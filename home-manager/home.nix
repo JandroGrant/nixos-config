@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  local-flake,
   ...
 }: let
   font = "FantasqueSansM";
@@ -12,7 +11,6 @@ in {
     stateVersion = "25.11";
 
     packages = with pkgs; [
-      local-flake.packages.x86_64-linux.default
       pywal16
       nerd-fonts.fantasque-sans-mono
       vlc
@@ -28,6 +26,7 @@ in {
     ./programs/fish
     ./programs/hyprshot
     (import ./programs/kitty {inherit pkgs;})
+    (import ./programs/neovim {inherit pkgs;})
     ./programs/rmpc
     (import ./programs/rofi {inherit config;})
     ./programs/vesktop

@@ -1,6 +1,5 @@
 {
-  wayland.windowManager.hyprland =
-  let 
+  wayland.windowManager.hyprland = let
     terminal = "kitty";
     browser = "firefox";
     menu = ''rofi -show drun -p "Launch?"'';
@@ -10,8 +9,7 @@
     mainMod = "SUPER";
     shiftMod = "SHIFT SUPER";
     printMod = "${mainMod}, P";
-  in
-  {
+  in {
     enable = true;
     sourceFirst = true;
     settings = {
@@ -28,79 +26,79 @@
       # env variables
       env = [
         "XCURSOR_SIZE,24"
-	"HYPRCURSOR_SIZE,24"
+        "HYPRCURSOR_SIZE,24"
       ];
 
       general = {
         gaps_in = 5;
-	gaps_out = 20;
-	border_size = 2;
-	"col.active_border" = "$color1";
-	"col.inactive_border" = "$background";
-	resize_on_border = false;
-	allow_tearing = false;
-	layout = "dwindle";
+        gaps_out = 20;
+        border_size = 2;
+        "col.active_border" = "$color1";
+        "col.inactive_border" = "$background";
+        resize_on_border = false;
+        allow_tearing = false;
+        layout = "dwindle";
       };
 
       decoration = {
         rounding = 10;
-	rounding_power = 2;
+        rounding_power = 2;
 
-	active_opacity = 1;
-	inactive_opacity = 0.95;
+        active_opacity = 1;
+        inactive_opacity = 0.95;
 
-	shadow = {
+        shadow = {
           enabled = true;
-	  range = 4;
-	  render_power = 3;
-	  color = "rgba(1a1a1aee)";
-	};
+          range = 4;
+          render_power = 3;
+          color = "rgba(1a1a1aee)";
+        };
 
-	blur = {
+        blur = {
           enabled = true;
-	  size = 3;
-	  passes = 1;
+          size = 3;
+          passes = 1;
 
-	  vibrancy = 0.1696;
-	};
+          vibrancy = 0.1696;
+        };
       };
-      
+
       animations = {
         enabled = "yes, please :)";
 
-	bezier = [
+        bezier = [
           "easeOutQuint, 0.23, 1, 0.32, 1"
-	  "easeInOutCubic, 0.65, 0.05, 0.36, 1"
-	  "linear, 0, 0, 1, 1"
-	  "almostLinear, 0.5, 0.5, 0.75, 1"
-	  "quick, 0.15, 0, 0.1, 1"
-	];
+          "easeInOutCubic, 0.65, 0.05, 0.36, 1"
+          "linear, 0, 0, 1, 1"
+          "almostLinear, 0.5, 0.5, 0.75, 1"
+          "quick, 0.15, 0, 0.1, 1"
+        ];
 
-	animation = [
-           "global, 1, 10, default"
-	   "border, 1, 5.39, easeOutQuint"
-	   "windows, 1, 4.79, easeOutQuint"
-	   "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
-	   "windowsOut, 1, 1.49, linear, popin 87%"
-	   "fadeIn, 1, 1.73, almostLinear"
-	   "fadeOut, 1, 1.46, almostLinear"
-	   "fade, 1, 3.03, quick"
-	   "layers, 1, 3.81, easeOutQuint"
-	   "layersIn, 1, 4, easeOutQuint, fade"
-	   "layersOut, 1, 1.5, linear, fase"
-	   "fadeLayersIn, 1, 1.79, almostLinear"
-	   "fadeLayersOut, 1, 1.39, almostLinear"
-	   "workspaces, 1, 6.94, easeOutQuint, slide"
-	   "workspacesIn, 1, 6.21, easeOutQuint, slide"
-	   "workspacesOut, 1, 6.94, easeOutQuint, slide"
-	   "specialWorkspace, 1, 5, easeOutQuint, slide -50%"
-	   "zoomFactor, 1, 7, quick"
-	];
+        animation = [
+          "global, 1, 10, default"
+          "border, 1, 5.39, easeOutQuint"
+          "windows, 1, 4.79, easeOutQuint"
+          "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
+          "windowsOut, 1, 1.49, linear, popin 87%"
+          "fadeIn, 1, 1.73, almostLinear"
+          "fadeOut, 1, 1.46, almostLinear"
+          "fade, 1, 3.03, quick"
+          "layers, 1, 3.81, easeOutQuint"
+          "layersIn, 1, 4, easeOutQuint, fade"
+          "layersOut, 1, 1.5, linear, fase"
+          "fadeLayersIn, 1, 1.79, almostLinear"
+          "fadeLayersOut, 1, 1.39, almostLinear"
+          "workspaces, 1, 6.94, easeOutQuint, slide"
+          "workspacesIn, 1, 6.21, easeOutQuint, slide"
+          "workspacesOut, 1, 6.94, easeOutQuint, slide"
+          "specialWorkspace, 1, 5, easeOutQuint, slide -50%"
+          "zoomFactor, 1, 7, quick"
+        ];
       };
 
       dwindle = {
         pseudotile = true;
-	preserve_split = true;
+        preserve_split = true;
       };
 
       master = {
@@ -109,134 +107,133 @@
 
       misc = {
         force_default_wallpaper = -1;
-	disable_hyprland_logo = true;
+        disable_hyprland_logo = true;
       };
 
       # oh god its input time
       input = {
         kb_layout = "us";
 
-	repeat_delay = 200;
-	repeat_rate = 25;
+        repeat_delay = 200;
+        repeat_rate = 25;
 
-	follow_mouse = 1;
+        follow_mouse = 1;
 
-	sensitivity = 0;
+        sensitivity = 0;
 
-	touchpad = {
+        touchpad = {
           natural_scroll = false;
-	};
+        };
       };
 
       gesture = "3, horizontal, workspace";
 
       device = {
         name = "epic-mouse-v1";
-	sensitivity = -0.5;
+        sensitivity = -0.5;
       };
 
       # keybindings
       bind = [
         "${printMod}, exec, hyprshot -m region --clipboard-only"
 
-	"${mainMod}, f, exec, ${browser}"
+        "${mainMod}, f, exec, ${browser}"
 
-	"${mainMod}, Return, exec, ${terminal}"
-	"${mainMod}, Delete, exit"
-	"${mainMod}, C, killactive"
-	"${mainMod}, V, togglefloating"
-	"${mainMod}, R, exec, ${menu}"
-	"${mainMod}, W, exec, ${wallpaperSwitcher}"
-	"${mainMod}, N, exec, ${notes}"
+        "${mainMod}, Return, exec, ${terminal}"
+        "${mainMod}, Delete, exit"
+        "${mainMod}, C, killactive"
+        "${mainMod}, V, togglefloating"
+        "${mainMod}, R, exec, ${menu}"
+        "${mainMod}, W, exec, ${wallpaperSwitcher}"
+        "${mainMod}, N, exec, ${notes}"
 
-	# move focus with vim keys
-	"${mainMod}, h, movefocus, l"
-	"${mainMod}, l, movefocus, r"
-	"${mainMod}, k, movefocus, u"
-	"${mainMod}, j, movefocus, d"
+        # move focus with vim keys
+        "${mainMod}, h, movefocus, l"
+        "${mainMod}, l, movefocus, r"
+        "${mainMod}, k, movefocus, u"
+        "${mainMod}, j, movefocus, d"
 
-	# swap windows around
-	"${mainMod} SHIFT, h, swapwindow, l"
-	"${mainMod} SHIFT, l, swapwindow, r"
-	"${mainMod} SHIFT, k, swapwindow, u"
-	"${mainMod} SHIFT, j, swapwindow, d"
+        # swap windows around
+        "${mainMod} SHIFT, h, swapwindow, l"
+        "${mainMod} SHIFT, l, swapwindow, r"
+        "${mainMod} SHIFT, k, swapwindow, u"
+        "${mainMod} SHIFT, j, swapwindow, d"
 
-	# switching workspaces
-	"${mainMod}, 1, workspace, 1"
-	"${mainMod}, 2, workspace, 2"
-	"${mainMod}, 3, workspace, 3"
-	"${mainMod}, 4, workspace, 4"
-	"${mainMod}, 5, workspace, 5"
-	"${mainMod}, 6, workspace, 6"
-	"${mainMod}, 7, workspace, 7"
-	"${mainMod}, 8, workspace, 8"
-	"${mainMod}, 9, workspace, 9"
-	"${mainMod}, 0, workspace, 10"
+        # switching workspaces
+        "${mainMod}, 1, workspace, 1"
+        "${mainMod}, 2, workspace, 2"
+        "${mainMod}, 3, workspace, 3"
+        "${mainMod}, 4, workspace, 4"
+        "${mainMod}, 5, workspace, 5"
+        "${mainMod}, 6, workspace, 6"
+        "${mainMod}, 7, workspace, 7"
+        "${mainMod}, 8, workspace, 8"
+        "${mainMod}, 9, workspace, 9"
+        "${mainMod}, 0, workspace, 10"
         # move to workspaces
-	"${mainMod} SHIFT, 1, movetoworkspace, 1"
-	"${mainMod} SHIFT, 2, movetoworkspace, 2"
-	"${mainMod} SHIFT, 3, movetoworkspace, 3"
-	"${mainMod} SHIFT, 4, movetoworkspace, 4"
-	"${mainMod} SHIFT, 5, movetoworkspace, 5"
-	"${mainMod} SHIFT, 6, movetoworkspace, 6"
-	"${mainMod} SHIFT, 7, movetoworkspace, 7"
-	"${mainMod} SHIFT, 8, movetoworkspace, 8"
-	"${mainMod} SHIFT, 9, movetoworkspace, 9"
-	"${mainMod} SHIFT, 0, movetoworkspace, 10"
+        "${mainMod} SHIFT, 1, movetoworkspace, 1"
+        "${mainMod} SHIFT, 2, movetoworkspace, 2"
+        "${mainMod} SHIFT, 3, movetoworkspace, 3"
+        "${mainMod} SHIFT, 4, movetoworkspace, 4"
+        "${mainMod} SHIFT, 5, movetoworkspace, 5"
+        "${mainMod} SHIFT, 6, movetoworkspace, 6"
+        "${mainMod} SHIFT, 7, movetoworkspace, 7"
+        "${mainMod} SHIFT, 8, movetoworkspace, 8"
+        "${mainMod} SHIFT, 9, movetoworkspace, 9"
+        "${mainMod} SHIFT, 0, movetoworkspace, 10"
 
-	  # special workspace
-	"${mainMod}, S, togglespecialworkspace, magic"
-	"${mainMod} SHIFT, S, movetoworkspace, special:magic"
+        # special workspace
+        "${mainMod}, S, togglespecialworkspace, magic"
+        "${mainMod} SHIFT, S, movetoworkspace, special:magic"
 
-	# audio extras
-	"${mainMod}, XF86AudioRaiseVolume, exec, rmpc seek +1"
-	"${mainMod}, XF86AudioLowerVolume, exec, rmpc seek -1"
+        # audio extras
+        "${mainMod}, XF86AudioRaiseVolume, exec, rmpc seek +1"
+        "${mainMod}, XF86AudioLowerVolume, exec, rmpc seek -1"
       ];
 
       bindm = [
-	# moving and resizing windows
-	"${mainMod}, mouse:272, movewindow"
-	"${mainMod}, mouse:273, resizewindow"
+        # moving and resizing windows
+        "${mainMod}, mouse:272, movewindow"
+        "${mainMod}, mouse:273, resizewindow"
       ];
 
       bindel = [
         # knob controls
         ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-	",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-	",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         # end knob controls
-	",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-	",XF86MonBrightnessUp, exec, brightnessctl -e5 -n2 set 5%+"
-	",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
+        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ",XF86MonBrightnessUp, exec, brightnessctl -e5 -n2 set 5%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
       ];
 
       bindl = [
         ", XF86AudioNext, exec, rmpc next"
-	", XF86AudioPause, exec, rmpc toggluepause"
-	", XF86AudioPlay, exec, rmpc togglepause"
-	", XF86AudioPrev, exec, rmpc prev"
-	", XF86AudioNext, exec, rmpc next"
+        ", XF86AudioPause, exec, rmpc toggluepause"
+        ", XF86AudioPlay, exec, rmpc togglepause"
+        ", XF86AudioPrev, exec, rmpc prev"
+        ", XF86AudioNext, exec, rmpc next"
       ];
 
       windowrule = [
         {
-	  name = "suppress-maximize-events";
-	  "match:class" = ".*";
+          name = "suppress-maximize-events";
+          "match:class" = ".*";
 
-	  suppress_event = "maximize";
-	}
-	{
+          suppress_event = "maximize";
+        }
+        {
           name = "fix-xwayland-drags";
-	  "match:class" = "^$";
-	  "match:title" = "^$";
-	  "match:xwayland" = true;
-	  "match:float" = true;
-	  "match:fullscreen" = false;
-	  "match:pin" = false;
-	  "no_focus" = true;
-	}
+          "match:class" = "^$";
+          "match:title" = "^$";
+          "match:xwayland" = true;
+          "match:float" = true;
+          "match:fullscreen" = false;
+          "match:pin" = false;
+          "no_focus" = true;
+        }
       ];
-
     };
   };
 }
