@@ -66,7 +66,7 @@
             options = {
               theme = "pywal",
               icons_enabled = true,
-              section_separators = { left = "", right = "" },
+              section_separators = { left = "", right = "" },
               components_separators = "|",
             }
           })
