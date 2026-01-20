@@ -5,6 +5,8 @@
     shellAliases = {
       v = "nvim";
       f = "yazi";
+      shell = "nix-shell --run fish";
+
       ff = "fastfetch";
       ffrhea = "fastfetch --logo ~/images/hello-abq.png --logo-type kitty-direct --logo-width 20 --logo-height 20";
       ffmonday = "fastfetch --logo ~/images/monday.png --logo-type kitty-direct --logo-width 50 --logo-height 20";
