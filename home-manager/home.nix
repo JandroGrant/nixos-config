@@ -14,6 +14,7 @@ in {
     packages = with pkgs; [
       local-flake.packages.x86_64-linux.default
       pywal16
+      pywalfox-native
       nerd-fonts.fantasque-sans-mono
       vlc
 
