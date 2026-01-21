@@ -5,6 +5,7 @@
       ${builtins.readFile ./lua/globals.lua}
       ${builtins.readFile ./lua/keymaps.lua}
       ${builtins.readFile ./lua/options.lua}
+      ${builtins.readFile ./lua/lspinit.lua}
     '';
     plugins = with pkgs.vimPlugins; [
       (import ./plugins/pywal-nvim { inherit pkgs; })
@@ -134,6 +135,11 @@
       }
 
       nvim-treesitter.withAllGrammars
+    ];
+    extraPackages = with pkgs; [
+      nil
+      lua-language-server
+      libclang
     ];
   };
 }
