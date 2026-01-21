@@ -2,9 +2,7 @@
   config,
   pkgs,
   ...
-}: let
-  font = "FantasqueSansM";
-in {
+}: {
   home = {
     username = "jandro";
     homeDirectory = "/home/jandro";
@@ -17,6 +15,8 @@ in {
 
       davinci-resolve
       obsidian
+
+      furnace
     ];
   };
 
