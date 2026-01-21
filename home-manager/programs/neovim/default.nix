@@ -134,6 +134,8 @@
         '';
       }
 
+      zen-mode-nvim
+
       nvim-treesitter.withAllGrammars
     ];
     extraPackages = with pkgs; [
