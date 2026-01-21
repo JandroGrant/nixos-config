@@ -2,28 +2,13 @@
   programs.neovim = {
     enable = true;
     extraLuaConfig = ''
-       vim.g.mapleader = " "
-       vim.g.maplocalleader = "\\"
-
-       -- basic settings
-       vim.opt.number = true
-      vim.opt.relativenumber = true
-      vim.opt.cursorline = true
-      vim.opt.scrolloff = 10
-      vim.opt.sidescrolloff = 8
-      vim.opt.wrap = false
-      vim.opt.cmdheight = 1
-      vim.opt.spelllang = { "en", "es" }
-
-      -- tabbing and indentation
-      vim.opt.tabstop = 2
-      vim.opt.shiftwidth = 2
-      vim.opt.softtabstop = 2
-      vim.opt.expandtab = true
-      vim.opt.smartindent = true
-      vim.opt.autoindent = true
+      ${builtins.readFile ./lua/globals.lua}
+      ${builtins.readFile ./lua/keymaps.lua}
+      ${builtins.readFile ./lua/options.lua}
     '';
     plugins = with pkgs.vimPlugins; [
+      (import ./plugins/pywal-nvim { inherit pkgs; })
+
       {
         plugin = blink-cmp;
         type = "lua";
@@ -52,11 +37,11 @@
         '';
       }
 
-      {
-        plugin = pywal-nvim;
-        type = "lua";
-        config = ''require("pywal").setup()'';
-      }
+      # {
+      #   plugin = pywal-nvim;
+      #   type = "lua";
+      #   config = ''require("pywal").setup()'';
+      # }
 
       {
         plugin = lualine-nvim;
@@ -135,6 +120,16 @@
              })
             end,
           })
+        '';
+      }
+
+      {
+        plugin = fzf-lua;
+        type = "lua";
+        config = ''
+          vim.keymap.set("n", "<leader><leader>", function()
+            require("fzf-lua").files()
+          end)
         '';
       }
 
