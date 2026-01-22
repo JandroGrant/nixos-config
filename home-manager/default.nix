@@ -17,6 +17,9 @@
       obsidian
 
       furnace
+      zenity
+
+      gimp
     ];
   };
 
