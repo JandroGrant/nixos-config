@@ -28,6 +28,7 @@
           builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
             "obsidian"
             "davinci-resolve"
+            "libretro-snes9x"
           ]
       );
     };

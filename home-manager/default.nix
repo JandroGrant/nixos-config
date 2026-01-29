@@ -17,9 +17,12 @@
       obsidian
 
       furnace
-      zenity
 
       gimp
+
+      archipelago
+      steamtinkerlaunch
+      r2modman
     ];
   };
 
