@@ -137,6 +137,7 @@
       zen-mode-nvim
 
       render-markdown-nvim
+      wrapping-nvim
 
       nvim-treesitter.withAllGrammars
     ];
