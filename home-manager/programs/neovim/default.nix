@@ -136,6 +136,8 @@
 
       zen-mode-nvim
 
+      render-markdown-nvim
+
       nvim-treesitter.withAllGrammars
     ];
     extraPackages = with pkgs; [
