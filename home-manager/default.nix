@@ -8,21 +8,22 @@
     homeDirectory = "/home/jandro";
     stateVersion = "25.11";
 
-    packages = with pkgs; [
-      pywal16
-      nerd-fonts.fantasque-sans-mono
-      vlc
+    packages = [
+      pkgs.pywal16
+      pkgs.nerd-fonts.fantasque-sans-mono
+      pkgs.vlc
 
-      davinci-resolve
-      obsidian
+      pkgs.obsidian
 
-      furnace
+      pkgs.furnace
 
-      gimp
+      pkgs.gimp
 
-      archipelago
-      steamtinkerlaunch
-      r2modman
+      pkgs.archipelago
+      pkgs.steamtinkerlaunch
+      pkgs.r2modman
+
+      pkgs.renoise
     ];
   };
 

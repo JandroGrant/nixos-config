@@ -52,9 +52,6 @@
   users.users.jandro = {
     isNormalUser = true;
     extraGroups = ["wheel"];
-    packages = with pkgs; [
-      tree
-    ];
     shell = pkgs.fish;
   };
 
@@ -83,6 +80,8 @@
 
     kitty
     waybar
+
+    tree
   ];
 
   # allow running appimages and the like

@@ -71,6 +71,7 @@
       mini-notify
 
       nvim-lspconfig
+      vim-godot
 
       {
         plugin = tiny-inline-diagnostic-nvim;
@@ -145,6 +146,7 @@
       nil
       lua-language-server
       libclang
+      gopls
     ];
   };
 }
