@@ -146,7 +146,12 @@
       nil
       lua-language-server
       libclang
+
+      # go
       gopls
+      gotools
+      go-tools
+      gccgo
     ];
   };
 }

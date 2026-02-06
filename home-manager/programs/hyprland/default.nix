@@ -12,6 +12,7 @@
   in {
     enable = true;
     sourceFirst = true;
+
     settings = {
       source = "~/.cache/wal/colors-hyprland.conf";
       exec = [
@@ -37,7 +38,6 @@
         "col.inactive_border" = "$background";
         resize_on_border = false;
         allow_tearing = false;
-        layout = "dwindle";
       };
 
       decoration = {

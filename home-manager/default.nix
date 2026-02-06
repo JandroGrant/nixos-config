@@ -22,8 +22,6 @@
       pkgs.archipelago
       pkgs.steamtinkerlaunch
       pkgs.r2modman
-
-      pkgs.renoise
     ];
   };
 

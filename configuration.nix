@@ -52,6 +52,7 @@
   users.users.jandro = {
     isNormalUser = true;
     extraGroups = ["wheel"];
+    packages = [ pkgs.renoise ];
     shell = pkgs.fish;
   };
 
