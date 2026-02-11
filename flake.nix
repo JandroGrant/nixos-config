@@ -29,6 +29,7 @@
           builtins.elem (pkg.pname or (builtins.parseDrvName pkg.name).name) [
             "obsidian"
             "renoise"
+            "davinci-resolve"
           ]
       );
     };

@@ -13,6 +13,8 @@
       pkgs.nerd-fonts.fantasque-sans-mono
       pkgs.vlc
 
+      pkgs.davinci-resolve
+
       pkgs.obsidian
 
       pkgs.furnace

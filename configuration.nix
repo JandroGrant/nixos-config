@@ -83,6 +83,8 @@
     waybar
 
     tree
+
+    xwayland-satellite
   ];
 
   # allow running appimages and the like
