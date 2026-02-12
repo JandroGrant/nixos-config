@@ -6,6 +6,7 @@
       v = "nvim";
       f = "yazi";
       shell = "nix-shell --run fish";
+      develop = "nix develop -c fish";
 
       ff = "fastfetch";
       ffrhea = "fastfetch --logo ~/images/hello-abq.png --logo-type kitty-direct --logo-width 20 --logo-height 20";
