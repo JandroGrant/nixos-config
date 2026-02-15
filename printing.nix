@@ -2,7 +2,7 @@
 {
   services.printing = {
     enable = true;
-    dirvers = with pkgs; [
+    drivers = with pkgs; [
       cups-filters
       cups-browsed
     ];
