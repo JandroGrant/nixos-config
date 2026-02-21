@@ -13,12 +13,17 @@
       url = "github:kamadorueda/alejandra/4.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fsel = {
+      url = "github:Mjoyufull/fsel";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     alejandra,
+    fsel,
     ...
   }: let
     system = "x86_64-linux";
@@ -30,6 +35,7 @@
             "obsidian"
             "renoise"
             "davinci-resolve"
+            "vital"
           ]
       );
     };
@@ -48,6 +54,9 @@
       inherit pkgs;
       modules = [
         ./home-manager
+        {
+          home.packages = [fsel.packages.${system}.default];
+        }
       ];
     };
   };

@@ -3,7 +3,7 @@
     enable = true;
     extraConfig = ''
       include ~/.cache/wal/colors-kitty.conf
-      background_opacity 0.7
+      background_opacity 0.5
     '';
     settings = {
       cursor_trail = 3;

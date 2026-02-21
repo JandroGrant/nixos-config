@@ -18,12 +18,16 @@
       pkgs.obsidian
 
       pkgs.furnace
+      pkgs.vital
 
       pkgs.gimp
 
       pkgs.archipelago
       pkgs.steamtinkerlaunch
       pkgs.r2modman
+
+      pkgs.uxn
+      pkgs.orca-c
     ];
   };
 

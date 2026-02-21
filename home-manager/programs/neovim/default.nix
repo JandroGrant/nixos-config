@@ -8,7 +8,7 @@
       ${builtins.readFile ./lua/lspinit.lua}
     '';
     plugins = with pkgs.vimPlugins; [
-      (import ./plugins/pywal-nvim { inherit pkgs; })
+      (import ./plugins/pywal-nvim {inherit pkgs;})
 
       {
         plugin = blink-cmp;
