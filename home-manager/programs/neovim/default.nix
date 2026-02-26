@@ -142,16 +142,6 @@
 
       nvim-treesitter.withAllGrammars
     ];
-    extraPackages = with pkgs; [
-      nil
-      lua-language-server
-      libclang
-
-      # go
-      gopls
-      gotools
-      go-tools
-      gccgo
-    ];
+    extraPackages = with pkgs; [nil];
   };
 }

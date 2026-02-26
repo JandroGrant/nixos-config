@@ -52,7 +52,7 @@
     isNormalUser = true;
     extraGroups = ["wheel"];
     packages = [];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   programs = {
@@ -67,7 +67,7 @@
       xwayland.enable = true;
     };
 
-    fish = {
+    zsh = {
       enable = true;
     };
   };
@@ -78,7 +78,7 @@
     wget
     git
 
-    kitty
+    foot
     waybar
 
     tree

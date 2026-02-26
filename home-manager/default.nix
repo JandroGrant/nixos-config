@@ -13,8 +13,6 @@
       pkgs.nerd-fonts.fantasque-sans-mono
       pkgs.vlc
 
-      pkgs.davinci-resolve
-
       pkgs.obsidian
 
       pkgs.furnace
@@ -34,7 +32,8 @@
   imports = [
     ./programs/bat
     ./programs/fastfetch
-    ./programs/fish
+    # ./programs/fish
+    # ./programs/foot
     ./programs/hyprshot
     (import ./programs/kitty {inherit pkgs;})
     (import ./programs/neovim {inherit pkgs;})
@@ -42,7 +41,7 @@
     (import ./programs/rofi {inherit config;})
     ./programs/vesktop
     ./programs/yazi
-    ./programs/zoxide
+    # ./programs/zoxide
 
     ./programs/hyprland
     ./programs/waybar
