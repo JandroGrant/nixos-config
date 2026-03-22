@@ -2,7 +2,7 @@
 @import "~/.cache/wal/colors-rofi-dark"
 
 * {
-  font: "FantasqueSansM Nerd Font 12";
+  font: "ProggyCleanTT";
 }
 window {
   anchor: north;

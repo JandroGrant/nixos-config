@@ -135,6 +135,14 @@
         '';
       }
 
+      {
+        plugin = neoscroll-nvim;
+        type = "lua";
+        config = ''
+          require("neoscroll").setup()
+        '';
+      }
+
       zen-mode-nvim
 
       render-markdown-nvim

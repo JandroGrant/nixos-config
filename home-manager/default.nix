@@ -10,13 +10,17 @@
 
     packages = [
       pkgs.pywal16
-      pkgs.nerd-fonts.fantasque-sans-mono
       pkgs.vlc
+
+      # pkgs.nerd-fonts.fantasque-sans-mono
+      pkgs.proggyfonts
 
       pkgs.obsidian
 
       pkgs.furnace
+      pkgs.milkytracker
       pkgs.vital
+      pkgs.audacity
 
       pkgs.gimp
 
@@ -26,14 +30,14 @@
 
       pkgs.uxn
       pkgs.orca-c
+
+      pkgs.kdePackages.kdenlive
     ];
   };
 
   imports = [
     ./programs/bat
     ./programs/fastfetch
-    # ./programs/fish
-    # ./programs/foot
     ./programs/hyprshot
     (import ./programs/kitty {inherit pkgs;})
     (import ./programs/neovim {inherit pkgs;})
@@ -43,8 +47,8 @@
     ./programs/yazi
     # ./programs/zoxide
 
-    ./programs/hyprland
-    ./programs/waybar
+    # ./programs/hyprland
+    # ./programs/waybar
   ];
 
   services = {

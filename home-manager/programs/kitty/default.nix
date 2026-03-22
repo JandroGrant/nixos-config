@@ -10,9 +10,9 @@
       cursor_trail_decay = "0.1 0.4";
     };
     font = {
-      name = "FantasqueSansM Nerd Font";
-      size = 16;
-      package = pkgs.nerd-fonts.fantasque-sans-mono;
+      name = "ProggyCleanTT";
+      size = 24;
+      package = pkgs.proggyfonts;
     };
   };
 }

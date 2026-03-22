@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     alejandra = {
       url = "github:kamadorueda/alejandra/4.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +28,7 @@
     nixpkgs,
     home-manager,
     alejandra,
+    mangowc,
     fsel,
     ...
   }: let
@@ -40,17 +46,19 @@
       );
     };
   in {
-    nixosConfigurations.mandarina = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.full = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
+        mangowc.nixosModules.mango
         {
           environment.systemPackages = [alejandra.defaultPackage.x86_64-linux];
+          programs.mango.enable = true;
         }
       ];
     };
 
-    homeConfigurations."jandro" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.full = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
         ./home-manager

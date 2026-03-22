@@ -9,6 +9,10 @@
     ./steamdrive.nix
   ];
 
+  fonts.packages = with pkgs; [
+    proggyfonts
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -51,7 +55,7 @@
   users.users.jandro = {
     isNormalUser = true;
     extraGroups = ["wheel"];
-    packages = [];
+    packages = [ pkgs.renoise ];
     shell = pkgs.zsh;
   };
 
